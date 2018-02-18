@@ -7,7 +7,7 @@ import (
 
 func TestLetterMap(t *testing.T) {
 	tests := []struct {
-		in string
+		in   string
 		want []string
 	}{
 		{"pfy", []string{"OXO", " X ", "XXO"}},

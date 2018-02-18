@@ -10,10 +10,9 @@ import (
 var (
 	canvas_x = flag.Int("canvas-x", 2300, "canvas width")
 	canvas_y = flag.Int("canvas-y", 3500, "canvas height")
-	font = flag.String("font", "KR Marker Thin.ttf", "TTF font file")
-	width = flag.Int("width", 130, "board width")
+	font     = flag.String("font", "KR Marker Thin.ttf", "TTF font file")
+	width    = flag.Int("width", 130, "board width")
 )
-
 
 func main() {
 	flag.Parse()
@@ -33,7 +32,7 @@ func main() {
 	}
 	dc.SetLineWidth(3)
 	dc.SetRGB255(255, 0, 0)
-	dc.SetStrokeStyle(gg.NewSolidPattern(color.NRGBA { 255, 0, 0, 255 }))
+	dc.SetStrokeStyle(gg.NewSolidPattern(color.NRGBA{255, 0, 0, 255}))
 
 	if err := ttt.RenderMessage(msg, *width, dc); err != nil {
 		panic(err)

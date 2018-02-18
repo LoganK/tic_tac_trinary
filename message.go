@@ -13,7 +13,7 @@ func init() {
 	letterMap = make(map[rune]string)
 
 	fromRune := func(c rune) string {
-		trit := map[int32]rune {
+		trit := map[int32]rune{
 			// 0 is 0 lines, 1 is 1 line, 2 is 2 lines
 			0: ' ',
 			1: 'O',
@@ -22,7 +22,7 @@ func init() {
 		res := ""
 		ci := int32(c) - int32('A') + 1
 		for i := 0; i < 3; i++ {
-			res = string(trit[ci % 3]) + res
+			res = string(trit[ci%3]) + res
 			ci /= 3
 		}
 		return res
